@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS三大模块之盒子模型:table边框合并效果</title>
+    <style type="text/css">
+        table {
+            width: 500px;
+            height: 500px;
+            border: 1px red solid;
+            border-collapse: collapse; /* 解决table的1px border和td 1px border的相加变粗成为2px问题 */
+        }
+        td {
+            border: 1px red solid;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0" cellpadding="0"> <!-- 去除table的单元格间距(cellspacing)、padding(内边距) -->
+        <tr>
+            <td>123</td>
+            <td>123</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>456</td>
+            <td>456</td>
+            <td>456</td>
+        </tr>
+        <tr>
+            <td>789</td>
+            <td>789</td>
+            <td>789</td>
+        </tr>
+    </table>
+</body>
+</html>
