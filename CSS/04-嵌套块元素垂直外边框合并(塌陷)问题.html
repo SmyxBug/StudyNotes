@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>嵌套块元素垂直外边框合并(塌陷)</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            /* 
+             * 1.父元素加上此属性子元素的margin-top: 20px;才会生效否则就是整体下拉20像素 
+             * 2.或者给父元素加上border属性
+             * 3.或者给父元素加上内边框 padding
+             */
+            overflow: hidden;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            /* margin-top: 20px; 此时单独写小div并不会以父元素为界向下便宜20像素，只会拉低整体。 */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <p>对于俩个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，</p>
+    <p>合并后的外边距为俩者中较大者，即时父元素上边距为0，也会发生合并！！！</p>
+</body>
+</html>

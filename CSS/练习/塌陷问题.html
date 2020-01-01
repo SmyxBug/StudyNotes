@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * { margin: 0; padding: 0; }/* 首先去除所有的内外边距 */
+        ul li { list-style: none; }
+        .search { /* 盒子的大小位置 */
+            width: 250px;
+            height: 300px;
+            border: 1px solid gray;
+            border-top: 3px solid orange;
+            margin: 20px auto;
+        }
+        .search h3 { /* 标题的样式：宽度不可以写直接让其继承父类就好，不然写的padding属性会有塌陷问题 */
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid gray;
+            padding-left: 14px;
+        }
+        .search img {
+            display: block;
+            margin: 8px auto;
+        }
+        .search a {
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .search ul {
+            margin-left: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <h3>搜索信息</h3>
+        <img src="./images/weiquan.png" width="218" height="161" alt="">
+        <ul>
+            <li><a href="#">窗前明月光</a></li>
+            <li><a href="#">疑是地上霜</a></li>
+            <li><a href="#">举头望明月</a></li>
+            <li><a href="#">低头思故乡</a></li>
+        </ul>
+    </div>
+</body>
+</html>
