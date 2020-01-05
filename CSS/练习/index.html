@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            width: 1600px;
+            height: 56px;
+            margin: 10px auto;
+        }
+        .logo {
+            float: left;
+        }
+        li {
+            list-style: none;
+            float: left;
+        }
+        a {
+            text-decoration: none;
+            padding: 20px;
+            color: #333;
+        }
+        a:hover {
+            color: red;
+        }
+        .menu {
+            float: left;
+            line-height: 56px;
+            margin-left: 35px;
+            font-size: 18px;
+        }
+        input {
+            border: 0;
+            box-sizing: border-box;
+        }
+        .search {
+            width: 410px;
+            height: 30px;
+            border: 1px solid #00a4ff;
+            float: right;
+            margin-top: 12px;
+        }
+        .search input[type=text] {
+            width: 360px;
+            height: 30px;
+            padding-left: 20px;
+        }
+        .search input[type=submit] {
+            width: 50px;
+            height: 30px;
+            float: right;
+            background: #00a4ff url("./images/search.png") center center no-repeat;
+            cursor: pointer;
+        }
+        .person {
+            height: 56px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- 导航栏logo -->
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <!-- 菜单区域 -->
+            <div class="menu">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">职业规划</a></li>
+                </ul>
+            </div>
+            <!-- 个人信息区域 -->
+            <div class="person">
+                <a href="#">个人中心&nbsp;&nbsp;&nbsp;<img src="./images/ld.png" alt=""></a>
+                <a href="#"><img src="./images/head.png" alt="">&nbsp;&nbsp;&nbsp;张三丰</a>
+            </div>
+            <!-- 搜索区域 -->
+            <div class="search">
+                <input type="text" placeholder="请输入关键词" />
+                <input type="submit" value="">
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
