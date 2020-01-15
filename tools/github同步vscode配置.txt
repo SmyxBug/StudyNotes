@@ -1,0 +1,5 @@
+github vscode settings json配置文件地址：https://gist.github.com/smyxcoding/29773fe1490aba591c0b476e4a69a2c9
+vscode_settings：8469ade63294c0f4d627e703db023aaeb460cc26
+
+参考网址：
+1.https://blog.csdn.net/niexia_/article/details/84063656
