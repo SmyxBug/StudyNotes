@@ -1,0 +1,55 @@
+header { /* 设置标题大小以及位置 */
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+header #newGameButton { /* 设置按钮颜色以及大小位置 */
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    padding: 10px 10px;
+    background-color: #907B64;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-decoration: none;
+}
+header #newGameButton:hover { /* 游戏按钮经过背景变色 */
+    background-color: #BCAE9F;
+}
+#grid-container { /* 设置盒子大小 */
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    background-color: #907B64;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+.grid-cell {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background-color: #BCAE9F;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    position: absolute;
+}
+.number-cell { 
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100px;
+    text-align: center;
+    position: absolute;
+}
