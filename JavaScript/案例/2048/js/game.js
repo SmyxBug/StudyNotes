@@ -15,3 +15,12 @@ $(document).keydown(function(event) {
         
     }
 });
+// 方向键左移操作
+function moveLeft() {
+    // 不可移动
+    if (!isCanMoveLeft(oGirds)) {
+        return false;
+    }
+    // 完成移动逻辑
+    return true;
+}
