@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    window.version='1.0';
+    const ES = {
+      version: '2015'
+    }
+    //1.this是静态的始终指向声明时所在的作用域
+    function getVersion() {
+      console.log(this.version);
+    }
+    let getVersion2 = () => {
+      console.log(this.version);
+    }
+    getVersion(); // 1.0
+    getVersion2(); // 1.0
+
+    getVersion.call(ES); // 2015
+    getVersion2.call(ES); // 1.0
+
+    //2.箭头函数不能构造实例化对象
+    //3.不能使用arguments
+    let fn = () => {
+      console.log(arguments); // 02箭头函数.html:30 Uncaught ReferenceError: arguments is not defined
+    }
+    fn();
+
+  </script>
+</body>
+</html>

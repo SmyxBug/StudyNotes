@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>箭头函数</title>
+</head>
+<body>
+  <div id="show" style="border: 1px solid black; width: 100px; height: 100px;"></div>
+  <script>
+    // 定时改变div的颜色
+    let ele = document.getElementById('show');
+    // ele.addEventListener('click', function() {
+    //   setTimeout(function() {
+    //     this.style.background = 'pink'; // 错误信息 Uncaught TypeError: Cannot set property 'background' of undefined
+    //   }, 1000);
+    // });
+    // 因为setTimeout中的this产生了变化所以导致找不到style属性 就无法改变颜色需要额外获取到this保存 才可以给setTimeout使用
+    // 修改如下！
+    ele.addEventListener('click', function() {
+      let _this = this;
+      setTimeout(function() {
+        _this.style.background = 'pink';
+      }, 1000);
+    });
+    // 箭头函数可以更好的解决此问题 因为箭头函数的this其实是指向声明时所在的作用域
+    ele.addEventListener('click', function() {
+      setTimeout(() => {
+        this.style.background = 'blue';
+      }, 2000);
+    });
+
+
+    //从数组中返回所有偶数
+    // 普通写法
+    let arr = [1,6,8,9,10];
+    let dualArr = arr.filter(function(item) {
+      if (item % 2 === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    console.log(dualArr);
+    // 箭头函数
+    dualArr = arr.filter(item => item % 2 === 0);
+    console.log(dualArr);
+  </script>
+</body>
+</html>

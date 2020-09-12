@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>let 案例</title>
+</head>
+<body>
+  <div class="item" style="border: 1px solid black; width: 50px; height: 50px;">1</div>
+  <div class="item" style="border: 1px solid black; width: 50px; height: 50px;">2</div>
+  <div class="item" style="border: 1px solid black; width: 50px; height: 50px;">3</div>
+  <script>
+    let items = document.getElementsByClassName('item');
+    console.log(items);
+    // for(var i=0; i < items.length; i++) {
+    //   items[i].onclick = function() {
+    //     this.style.background = 'pink'; // 这是es6 let没有出现前的解决办法
+    //     // items[i].style.background = 'pink'; // 这是错误的做法 无法执行的
+    //   }
+    // }
+    /**
+     * TODO 上面之所以错误就是因为var可以重复申明变量 导致 i 被污染 最后成了3 而 div数组下标最大是2！！！！！！
+     */
+    // 以下就是es6 let直接解决
+    for (let y=0; y < items.length; y++) {
+      items[y].onclick = function() {
+        items[y].style.background = 'pink';
+      }
+    }
+  </script>
+</body>
+</html>
