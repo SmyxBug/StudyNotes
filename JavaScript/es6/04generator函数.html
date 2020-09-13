@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>generator</title>
+</head>
+<body>
+  
+  <script>
+    // 声明
+    function* gen() {
+      console.log('generator function....');
+    }
+    // 运行
+    let genfun = gen();
+    // gen(); // 不会执行
+    genfun.next(); // 执行
+
+    // 配合yield
+    function* yieldGen() {
+      console.log(1);
+      yield '01';
+      console.log(2);
+      yield '02';
+      console.log(3);
+      yield '3';
+      console.log(4);
+    }
+    let yiGen = yieldGen();
+    yiGen.next(); // 输出1
+    yiGen.next(); // 输出2
+    yiGen.next(); // 输出3
+    yiGen.next(); // 输出4
+
+    function* paramsGen(param) {
+      console.log(param); // hh
+      let one = yield '1';
+      console.log(one); // 11111
+      let two = yield '2';
+      console.log(two); // 22222
+    }
+
+    let genFuntion = paramsGen('hh');
+    genFuntion.next();
+    genFuntion.next('11111');
+    genFuntion.next('22222');
+
+  </script>
+
+</body>
+</html>
